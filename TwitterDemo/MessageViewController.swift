@@ -18,7 +18,8 @@ class MessageViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-nameLabel.text = user.name
+      nameLabel.text = user.name
+   
         // Do any additional setup after loading the view.
     }
 

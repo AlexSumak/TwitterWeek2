@@ -85,17 +85,26 @@ extension TweetsViewController: TweetCellDelegate {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     if let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController{
       profileVC.user = data
-      self.navigationController?.pushViewController(profileVC, animated: true)
+      
+      //let backItem = UIBarButtonItem()
+      //backItem.title = "Tweet"
+      //self.navigationItem.backBarButtonItem = backItem
+      //UIBarButtonItem.appearance(whenContainedInInstancesOf: <#T##[UIAppearanceContainer.Type]#>)
+      
+      //backItem.
+      
+     
+     self.navigationController?.pushViewController(profileVC, animated: true)
       
     }
     
     
   }
-  func userTappedText(tappedCell: TweetCell, withUserData data: User) {
+  func userTappedText(tappedCell: TweetCell, withUserData data: Tweet) {
     
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     if let profileVC = storyboard.instantiateViewController(withIdentifier: "TweetDetailsViewController") as? TweetDetailsViewController{
-      profileVC.user = data
+      profileVC.tweet = data
       self.navigationController?.pushViewController(profileVC, animated: true)
       
     }
@@ -110,10 +119,6 @@ extension TweetsViewController: TweetCellDelegate {
       self.navigationController?.pushViewController(profileVC, animated: true)
       
     }
-  
-  
-  
-  
   
 }
 }

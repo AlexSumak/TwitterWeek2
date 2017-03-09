@@ -19,7 +19,7 @@ class Tweet: NSObject {
      var retweeted_status: Tweet?
      var current_user_retweet: Tweet?
      var favorited: Bool?
-     var profileImageUrlString: String?
+     var profileUrl: URL?
      var tweetDict: NSDictionary!
     var user: User{
         return User(dictionary: self.tweetDict["user"] as! NSDictionary)
@@ -49,7 +49,12 @@ class Tweet: NSObject {
         } else {
             retweeted_status = nil
         }
-        
+      
+      let profileUrlString = dictionary["profile_image_url_https"] as? String
+      if let profileUrlString = profileUrlString {
+        profileUrl = URL(string: profileUrlString)
+      }
+      
         let current_user_retweet_dict = (dictionary["current_user_retweet"] as? NSDictionary) ?? nil
         if current_user_retweet_dict != nil {
             current_user_retweet = Tweet(dictionary: current_user_retweet_dict!)

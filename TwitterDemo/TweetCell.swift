@@ -13,7 +13,7 @@ protocol TweetCellDelegate: class {
     User)
   
   func userTappedText(tappedCell: TweetCell, withUserData data:
-    User)
+    Tweet)
   
   func userTappedReply(tappedCell: TweetCell, withUserData data:
     User)
@@ -137,12 +137,12 @@ class TweetCell: UITableViewCell {
     }
     
   @IBAction func userTappedText(_ sender: Any) {
-    delegate?.userTappedText(tappedCell: self, withUserData: (self.tweet?.user)!)
+    delegate?.userTappedText(tappedCell: self, withUserData: (self.tweet)!)
     
   }
   
   @IBAction func userTappedReply(_ sender: Any) {
-       delegate?.userTappedText(tappedCell: self, withUserData: (self.tweet?.user)!)
+       delegate?.userTappedText(tappedCell: self, withUserData: (self.tweet)!)
   }
  
     

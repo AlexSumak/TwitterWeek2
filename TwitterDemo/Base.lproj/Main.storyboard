@@ -272,7 +272,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="DCm-tD-zEj"/>
                     <connections>
+                        <outlet property="backGroundImage" destination="bGZ-Cr-P34" id="6iH-fW-Qpv"/>
                         <outlet property="nameLabel" destination="QM5-We-A2U" id="i1h-Dd-P6H"/>
+                        <outlet property="numFollowersLabel" destination="8Vd-Sx-lCf" id="yft-EF-smH"/>
+                        <outlet property="numFollowingLabel" destination="IKa-mm-PSs" id="bGp-UF-jcR"/>
+                        <outlet property="numTweetsLabel" destination="IhJ-kp-vVu" id="m4j-2i-AfQ"/>
+                        <outlet property="profileImage" destination="6Te-sN-uTD" id="OtE-d0-cf4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7O-RT-EbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -291,8 +296,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9U0-h8-ROb">
+                                <rect key="frame" x="16" y="11" width="108" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aC-Xf-QId">
+                                <rect key="frame" x="16" y="138" width="343" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="711-gA-HFc">
-                                <rect key="frame" x="90" y="75" width="248" height="21"/>
+                                <rect key="frame" x="136" y="11" width="223" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -303,6 +319,8 @@
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="711-gA-HFc" id="4cK-39-0WL"/>
+                        <outlet property="profileImage" destination="9U0-h8-ROb" id="3VV-mg-yBf"/>
+                        <outlet property="textLabel" destination="1aC-Xf-QId" id="ThR-El-jf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDH-OL-rgq" userLabel="First Responder" sceneMemberID="firstResponder"/>

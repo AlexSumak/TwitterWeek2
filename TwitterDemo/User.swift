@@ -13,7 +13,8 @@ class User: NSObject {
     var screenname: String?
     var profileUrl: URL?
     var tagline: String?
-    
+  var profileBackground: URL?
+  
     var dictionary: NSDictionary?
     
     init(dictionary: NSDictionary) {
@@ -26,7 +27,12 @@ class User: NSObject {
         if let profileUrlString = profileUrlString {
             profileUrl = URL(string: profileUrlString)
         }
-        
+      
+      
+      let profileBackgroundString = dictionary["profile_banner_url"] as? String
+      if let profileBackgroundString = profileBackgroundString {
+        profileBackground = URL(string: profileBackgroundString)
+      }
         tagline = dictionary["description"] as? String
     }
     
