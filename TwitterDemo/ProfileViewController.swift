@@ -19,18 +19,24 @@ class ProfileViewController: UIViewController {
   
     var user: User!
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
       
+    
+//      print(user)
+//      print(user.dictionary)
       
-      
-      
-      
-      print(user)
-      print(user.dictionary)
       nameLabel.text = user.name
+      
       profileImage.setImageWith(user.profileUrl!)
       backGroundImage.setImageWith(user.profileBackground!)
-        // Do any additional setup after loading the view.
+     
+      numTweetsLabel.text = String(user.numTweets)
+      
+      numFollowingLabel.text = String(user.numFollowings)
+      numFollowersLabel.text = String(user.numFollowers)
+      
+      
+      
     }
 
     override func didReceiveMemoryWarning() {

@@ -89,7 +89,7 @@
                                                     <color key="highlightedColor" red="1" green="0.7094074625168022" blue="0.72453000359416286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmj-q9-9yd">
-                                                    <rect key="frame" x="174" y="77.5" width="9" height="18"/>
+                                                    <rect key="frame" x="151" y="77.5" width="9" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -101,29 +101,29 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-SG-Nsl">
-                                                    <rect key="frame" x="75" y="71" width="42" height="30.5"/>
+                                                    <rect key="frame" x="75" y="71" width="30" height="30.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <state key="normal" title="R" image="reply-icon"/>
+                                                    <state key="normal" image="reply-icon"/>
                                                     <connections>
                                                         <action selector="userTappedReply:" destination="ccK-d1-lEx" eventType="touchUpInside" id="maz-gz-eUa"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXG-mt-3r3">
-                                                    <rect key="frame" x="199" y="71.5" width="40" height="30"/>
-                                                    <state key="normal" title="L" image="favor-icon-red"/>
+                                                    <rect key="frame" x="176" y="71.5" width="30" height="30"/>
+                                                    <state key="normal" image="favor-icon-red"/>
                                                     <connections>
                                                         <action selector="onLike:" destination="ccK-d1-lEx" eventType="touchUpInside" id="Bni-jr-kLO"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4w-Pt-wSA">
-                                                    <rect key="frame" x="125" y="71.5" width="41" height="30"/>
-                                                    <state key="normal" title="T" image="retweet-icon-green"/>
+                                                    <rect key="frame" x="113" y="71.5" width="30" height="30"/>
+                                                    <state key="normal" image="retweet-icon-green"/>
                                                     <connections>
                                                         <action selector="onRetweet:" destination="ccK-d1-lEx" eventType="touchUpInside" id="F93-N3-KfH"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdk-jM-NtO">
-                                                    <rect key="frame" x="247" y="78" width="9.5" height="18"/>
+                                                    <rect key="frame" x="214" y="78" width="9.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -215,7 +215,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vd-Sx-lCf">
-                                <rect key="frame" x="151" y="360" width="143" height="21"/>
+                                <rect key="frame" x="151" y="360" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -297,35 +297,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9U0-h8-ROb">
-                                <rect key="frame" x="16" y="11" width="108" height="105"/>
+                                <rect key="frame" x="16" y="15" width="101" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aC-Xf-QId">
-                                <rect key="frame" x="16" y="138" width="343" height="176"/>
+                                <rect key="frame" x="25" y="138" width="343" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="711-gA-HFc">
-                                <rect key="frame" x="136" y="11" width="223" height="21"/>
+                                <rect key="frame" x="136" y="15" width="223" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5Q-it-hcF">
+                                <rect key="frame" x="25" y="317" width="27" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="reply-icon"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="711-gA-HFc" id="4cK-39-0WL"/>
                         <outlet property="profileImage" destination="9U0-h8-ROb" id="3VV-mg-yBf"/>
+                        <outlet property="replyButton" destination="x5Q-it-hcF" id="Vzh-1V-WPj"/>
                         <outlet property="textLabel" destination="1aC-Xf-QId" id="ThR-El-jf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDH-OL-rgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="375.56221889055473"/>
+            <point key="canvasLocation" x="2219.5" y="375.5"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="IhR-LE-SK5">
@@ -340,17 +346,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axx-Kb-b2L">
-                                <rect key="frame" x="32" y="95" width="248" height="24"/>
+                                <rect key="frame" x="95" y="43" width="184" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2Z-Ir-dza">
+                                <rect key="frame" x="16" y="43" width="65" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cHb-gs-y6g">
+                                <rect key="frame" x="16" y="122" width="343" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQG-Ne-Cbh">
+                                <rect key="frame" x="277" y="276" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="tweet"/>
+                                <connections>
+                                    <action selector="tweet:" destination="gcc-FJ-6un" eventType="touchUpInside" id="N3l-04-M8K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CM-1g-WfY">
+                                <rect key="frame" x="36" y="268" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="gcc-FJ-6un" eventType="touchUpInside" id="Gnj-yK-WIj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="messageView" destination="cHb-gs-y6g" id="afq-NZ-XeO"/>
                         <outlet property="nameLabel" destination="axx-Kb-b2L" id="aUd-K4-8UG"/>
+                        <outlet property="profileImage" destination="g2Z-Ir-dza" id="dRs-7W-7zA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61b-g9-NT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,7 +396,6 @@
         <!--Navigation Controller-->
         <scene sceneID="69W-XT-mF3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6E-gl-IZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="5zR-Ab-Aac" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zgh-vx-7Hc">
@@ -372,13 +407,13 @@
                         <segue destination="ED7-vj-M08" kind="relationship" relationship="rootViewController" id="B1i-Cb-tCr"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6E-gl-IZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-142" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZGg-IA-l7x">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0n3-xR-OtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ED7-vj-M08" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nF5-A5-xXy"/>
@@ -391,6 +426,7 @@
                         <segue destination="P2H-Hm-cx5" kind="relationship" relationship="rootViewController" id="rYM-uW-Shi"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0n3-xR-OtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="577" y="27"/>
         </scene>

@@ -16,17 +16,18 @@ class Tweet: NSObject {
     var timestamp: Date?
     var retweetCount: Int = 0
     var favoriteCount: Int = 0
-     var retweeted_status: Tweet?
-     var current_user_retweet: Tweet?
-     var favorited: Bool?
-     var profileUrl: URL?
-     var tweetDict: NSDictionary!
+    var retweeted_status: Tweet?
+    var current_user_retweet: Tweet?
+    var favorited: Bool?
+    var profileUrl: URL?
+    var tweetDict: NSDictionary!
     var user: User{
         return User(dictionary: self.tweetDict["user"] as! NSDictionary)
     }
     
     
     init(dictionary: NSDictionary){
+      //print(dictionary)
         self.tweetDict = dictionary
         text = dictionary["text"] as? String
         //initialize a variable that obtains user dictioanry
@@ -50,7 +51,9 @@ class Tweet: NSObject {
             retweeted_status = nil
         }
       
-      let profileUrlString = dictionary["profile_image_url_https"] as? String
+      let userdictionary = dictionary["user"] as? NSDictionary
+      
+      let profileUrlString = userdictionary!["profile_image_url_https"] as? String
       if let profileUrlString = profileUrlString {
         profileUrl = URL(string: profileUrlString)
       }
@@ -61,22 +64,16 @@ class Tweet: NSObject {
         } else {
             current_user_retweet = nil
         }
-        
           favorited = dictionary["favorited"] as? Bool
-        
     }
-    
     class func tweetsWithArray(dictionaries: [NSDictionary]) -> [Tweet] {
         var tweets = [Tweet]()
-        
         for dictionary in dictionaries {
             let tweet = Tweet(dictionary: dictionary)
-            
             tweets.append(tweet)
         }
         return tweets
     }
-    
 }
 
 

@@ -11,7 +11,7 @@ import BDBOAuth1Manager
 
 class TwitterClient: BDBOAuth1SessionManager {
 
-    static let sharedInstance = TwitterClient(baseURL: URL(string: "https://api.twitter.com")!, consumerKey: "dw7UtPbafZyOGgyJxUak9r7Or", consumerSecret: "d88WTPOzq4eD2CY3rMRZWCJ0cPQDQ0z1HVKifhfY4ttU4nDcRc")
+    static let sharedInstance = TwitterClient(baseURL: URL(string: "https://api.twitter.com")!, consumerKey: "Xdztgh6PILOEcGBaejk8ZCwYj", consumerSecret: "4FckRuvrTXXvFzbachNOgL47lUnSIFcca4xH0WcaBJdewiRHQg")
     
     var loginSuccess: (() -> ())?
     var loginFailure: ((Error) -> ())?
@@ -100,8 +100,47 @@ class TwitterClient: BDBOAuth1SessionManager {
             
         })
     }
-
+  
+  
+  func replyTweet (message: String, replyID: String) {
+    //let encodedTweetText = message.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     
+    var paramsDictionary: [String: Any?] = [String: Any?]()
+    paramsDictionary.updateValue(message, forKey: "status")
+    paramsDictionary.updateValue(replyID, forKey: "in_reply_to_status_id")
+    
+    post("1.1/statuses/update.json", parameters: paramsDictionary, progress: nil, success: {(task: URLSessionDataTask, response: Any?) -> Void in
+      print("message tweeted")
+      
+      
+    }, failure: {(task: URLSessionDataTask?, error: Error) -> Void in
+      print("message unable to tweet")
+      
+    })
+    
+    
+  }
+  
+  func sendTweet (message: String, success: @escaping (Tweet)->()) {
+    let encodedTweetText = message.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+    
+    
+    post("1.1/statuses/update.json?status=\(encodedTweetText!)", parameters: nil, progress: nil, success: {(task: URLSessionDataTask, response: Any?) -> Void in
+      print("message tweeted")
+      let tweet = Tweet(dictionary: (response as? NSDictionary)!)
+      success(tweet)
+      print("Successfully posted tweet: \(response)")
+      
+    }, failure: {(task: URLSessionDataTask?, error: Error) -> Void in
+      print(error.localizedDescription)
+      
+    })
+    
+    
+  }
+  
+
+  
     func unretweet(tweet: Tweet, success: @escaping (Tweet) -> (), failure: @escaping (Error) -> ()) {
       
         if !tweet.retweeted! {

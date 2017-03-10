@@ -41,7 +41,20 @@ class TweetsViewController: UIViewController {
             print(error.localizedDescription)
         })
     }
-    
+  
+  override func viewDidAppear(_ animated: Bool) {
+    TwitterClient.sharedInstance?.homeTimeLine(count: count, success: { (tweets: [Tweet]) -> () in
+      self.tweets = tweets
+      self.tableView.reloadData()
+      
+      
+      
+    }, failure: { (error: Error) -> () in
+      print(error.localizedDescription)
+    })
+
+  }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -116,11 +129,23 @@ extension TweetsViewController: TweetCellDelegate {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     if let profileVC = storyboard.instantiateViewController(withIdentifier: "MessageViewController") as? MessageViewController{
       profileVC.user = data
+      profileVC.delegate = self
+      
       self.navigationController?.pushViewController(profileVC, animated: true)
       
     }
   
 }
+}
+
+extension TweetsViewController: MessageViewControllerDelegate{
+  
+  
+  func userSuccessTweet(tweet: Tweet) {
+    self.tweets.insert(tweet, at: 0)
+    let indexPath = IndexPath(row: 0, section: 0)
+    self.tableView.insertRows(at: [indexPath], with: .automatic)
+  }
 }
 
 

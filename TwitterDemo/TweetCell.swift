@@ -142,7 +142,7 @@ class TweetCell: UITableViewCell {
   }
   
   @IBAction func userTappedReply(_ sender: Any) {
-       delegate?.userTappedText(tappedCell: self, withUserData: (self.tweet)!)
+       delegate?.userTappedReply(tappedCell: self, withUserData: (self.tweet?.user)!)
   }
  
     

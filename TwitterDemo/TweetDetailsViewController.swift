@@ -9,18 +9,21 @@
 import UIKit
 
 class TweetDetailsViewController: UIViewController {
-   // var user: User!
+  
+  
   var tweet: Tweet!
   @IBOutlet weak var textLabel: UILabel!
   @IBOutlet weak var profileImage: UIImageView!
-  
   @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var replyButton: UIButton!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
        print(tweet.tweetDict)
       
-      //nameLabel.text = user.name
       textLabel.text = tweet.text
+      nameLabel.text = tweet.userName
+
       if let profileImg = tweet.profileUrl{
         profileImage.setImageWith(profileImg)
       }
